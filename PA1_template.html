@@ -231,8 +231,8 @@ date_label2 &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span clas
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<div id="a-new-factor-variable-in-the-dataset-with-two-levels-weekday-and-weekend-indicating-whether-a-given-date-is-a-weekday-or-weekend-day" class="section level3">
-<h3>A new factor variable in the dataset with two levels  “weekday” and “weekend” indicating whether a given date is a weekday or weekend day</h3>
+<div id="a-new-factor-variable-in-the-dataset-with-two-levels---weekday-and-weekend-indicating-whether-a-given-date-is-a-weekday-or-weekend-day" class="section level3">
+<h3>A new factor variable in the dataset with two levels - “weekday” and “weekend” indicating whether a given date is a weekday or weekend day</h3>
 <pre class="sourceCode r"><code class="sourceCode r">adinter[, week :<span class="er">=</span><span class="st"> </span><span class="kw">factor</span>(<span class="kw">ifelse</span>(<span class="kw">wday</span>(datetime) %in%<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">7</span>), <span class="st">&quot;weekend&quot;</span>, <span class="st">&quot;weekday&quot;</span>))]</code></pre>
 </div>
 <div id="make-a-panel-plot-containing-a-time-series-plot-of-the-5-minute-interval-and-the-average-number-of-steps-takenaveraged-across-all-weekday-days-or-weekend-days" class="section level3">

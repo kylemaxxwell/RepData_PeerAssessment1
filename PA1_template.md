@@ -210,7 +210,7 @@ median_total_imput_steps <- print(median(total_step_adinter$total))
 
 ## Are there differences in activity patterns between weekdays and weekends?  
 
-### A new factor variable in the dataset with two levels  weekday and weekend indicating whether a given date is a weekday or weekend day
+### A new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day
 
 ```r
 adinter[, week := factor(ifelse(wday(datetime) %in% c(1, 7), "weekend", "weekday"))]
