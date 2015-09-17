@@ -56,7 +56,7 @@ text(ymd_hms("2012-10-01 00:00:01"), median(total_step$total), labels = "median"
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
-> #### The line for <font color = "blue">mean</font> and <font color = "red">median</font> of the total number of steps taken per day are very close on the histogram. There numbers will be show below:
+> The line for **mean(BLUE)** and **median(RED)** of the total number of steps taken per day are very close on the histogram. There numbers will be show below:
 
 
 ```r
@@ -75,8 +75,8 @@ median_total_steps <- print(median(total_step$total))
 ## [1] 10765
 ```
 
-> #### The mean of the total number of steps taken per day approximately is <font color = "red">10766.19</font>  
-> #### The median of the total number of steps taken per day is <font color = "red">10765</font>
+> The mean of the total number of steps taken per day approximately is **10766.19**  
+> The median of the total number of steps taken per day is **10765**
 
 ## What is the average daily activity pattern?  
 
@@ -95,7 +95,7 @@ text(inter[which.max(inter$avg_steps), interval], max(inter$avg_steps), col = "r
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
 
-> #### The max average number of steps group by interval across all days approximately is <font color = "red">206.17</font> and it shows on the above plot with red vertical line and text.
+> The max average number of steps group by interval across all days approximately is **206.17** and it shows on the above plot with red vertical line and text.
 
 
 ```r
@@ -106,7 +106,7 @@ max_interval <- print(inter[which.max(inter$avg_steps), interval])
 ## [1] 835
 ```
 
-> #### The 5-minute interval contains the maximum number of steps is <font color = "red">835</font>
+> The 5-minute interval contains the maximum number of steps is **835**
 
 ## Imputing missing values  
 
@@ -120,7 +120,7 @@ missing_values <- print(sum(is.na(act_data$steps)))
 ```
 ## [1] 2304
 ```
-> #### The total number of missing values in the dataset is <font color = "red">2304</font>
+> The total number of missing values in the dataset is **2304**
 
 ### Use the "mean for that 5-minute interval" strategy. The strategy steps:
 
@@ -184,7 +184,7 @@ text(ymd_hms("2012-09-30 00:00:01"), median(total_step_adinter$total), labels = 
 
 ![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
 
-> #### The line for <font color = "blue">mean</font> and <font color = "red">median</font> of the total number of steps taken per day are very close on the histogram. There numbers will be show below:
+> The line for **mean(BLUE)** and **median(RED**) of the total number of steps taken per day are very close on the histogram. There numbers will be show below:
 
 
 ```r
@@ -202,11 +202,11 @@ median_total_imput_steps <- print(median(total_step_adinter$total))
 ```
 ## [1] 10762
 ```
-> #### The mean of the total number of steps taken per day approximately is <font color = "red">10765.64</font>
-> #### The median of the total number of steps taken per day is <font color = "red">10762</font>
+> The mean of the total number of steps taken per day approximately is **10765.64**
+> The median of the total number of steps taken per day is **10762**
 
 
-> From the result of mean and median between missing data and imputing data, the differ is small and the deviation of mean is  <font color = "red">0.55</font> and the deviation of median is <font color = "red">3</font>. Imputing missing data can fill all the day but not impact too much for the estimates of the total daily number of steps. And both of the mean and median are very close, it means the dataset doesn't appear outlier.
+> From the result of mean and median between missing data and imputing data, the differ is small and the deviation of mean is  **0.55** and the deviation of median is **3**. Imputing missing data can fill all the day but not impact too much for the estimates of the total daily number of steps. And both of the mean and median are very close, it means the dataset doesn't appear outlier.
 
 ## Are there differences in activity patterns between weekdays and weekends?  
 
@@ -238,4 +238,4 @@ ggplot(adinter_mean, aes(x = interval, y = avg_steps)) + labs(x = "Interval", y 
 
 ![](PA1_template_files/figure-html/unnamed-chunk-17-1.png) 
 
-> Above figure shows distributions of person-hours steps by 5-minute interval of day. The shade part of the area shows <font style="color: steelblue">morning</font> at 8:00 a.m. to 12:00 p.m., <font style="color: #CDCD00; background-color: white">afternoon</font> at 12:00 p.m. to 4:00 p.m., and <font color = "#EE9A00">evening</font> at 4:00 p.m. to 8:00 p.m. It can be seen the activities peak on weekday and weekend are close, but the weekend activities are more evenly distributed throughout the day. Generally, weekday activities peak in the morning and evening are higher than weekend activities.
+> Above figure shows distributions of person-hours steps by 5-minute interval of day. The shade part of the area shows **morning(BLUE)** at 8:00 a.m. to 12:00 p.m., **afternoon(YELLOW)** at 12:00 p.m. to 4:00 p.m., and **evening(ORANGE)** at 4:00 p.m. to 8:00 p.m. It can be seen the activities peak on weekday and weekend are close, but the weekend activities are more evenly distributed throughout the day. Generally, weekday activities peak in the morning and evening are higher than weekend activities.
